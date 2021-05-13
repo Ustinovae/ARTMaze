@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public bool moved = false;
     public float playerSpeed;
     private Vector3 dir;
     private Vector3 previosDir;
@@ -14,13 +15,14 @@ public class Player : MonoBehaviour
     public Player()
     {
         inMove = false;
-        color = new Color(0.754717f, 0.4236383f, 0.7085454f);
+        color = Color.blue;
     }
 
     public void Move(Vector3 dir)
     {
         if (dir != previosDir)
         {
+            moved = true;
             inMove = true;
             this.dir = dir;
         }
@@ -59,6 +61,7 @@ public class Player : MonoBehaviour
             inMove = false;
             if (currentCube != null)
                 transform.position = new Vector3(currentCube.transform.position.x, currentCube.transform.position.y, transform.position.z);
+            moved = false;
         }
     }
 }
