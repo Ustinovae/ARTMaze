@@ -51,6 +51,7 @@ public class Player : MonoBehaviour
         if (collision.transform.parent.CompareTag("colorCube"))
         {
             currentCube = collision.gameObject.GetComponent<SpriteRenderer>();
+            //transform.position = collision.transform.position.;
             collision.gameObject.GetComponent<SpriteRenderer>().color = color;
         }
         if (collision.transform.parent.CompareTag("wall"))
