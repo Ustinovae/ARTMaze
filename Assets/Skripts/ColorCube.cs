@@ -18,8 +18,10 @@ public class ColorCube : MonoBehaviour
     private float timerCount = 0f;
     public GameObject redyButton;
     public GameObject crossword;
-    private int indexChild = 1;
+    public GameObject TouchController;
     private bool isStart = false;
+    private bool TimerRun = false;
+
     private List<Color> correctCrossword = new List<Color>
     {
         Color.blue, Color.red, Color.red,Color.red,
@@ -50,13 +52,19 @@ public class ColorCube : MonoBehaviour
         isStart = true;
         crossword.SetActive(true);
         crossword.SetActive(true);
+        timer.text = "00:00.00";
+        TimerRun = true;
+
     }
 
     public void GetPrompt()
     {
-        if(!player.moved)
+        if (!player.moved)
+        {
             for (var i = 0; i < crossword.transform.childCount; i++)
                 crossword.transform.GetChild(i).GetComponent<Text>().color = correctCrossword[i];
+            timerCount += 10;
+        }
     }
 
     public void ActivateContinueButton()
@@ -77,15 +85,17 @@ public class ColorCube : MonoBehaviour
 
     void Update()
     {
-        if (!redyButton.activeInHierarchy && !finishGame.activeInHierarchy && !continueButton.activeInHierarchy)
+        if (TimerRun)
         {
             timerCount += Time.deltaTime;
-            timer.text = Math.Truncate(timerCount).ToString();
+            timer.text = TimeSpan.FromSeconds(timerCount).ToString("mm':'ss','ff" );
         }
         
         if (CheckWin() && isStart)
         {
             continueButton.SetActive(true);
+            TimerRun = false;
+            TouchController.SetActive(false);
         }
         if (player.moved)
             for (var i = 0; i < crossword.transform.childCount; i++)
