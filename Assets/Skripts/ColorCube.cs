@@ -22,11 +22,14 @@ public class ColorCube : MonoBehaviour
     private bool isStart = false;
     private bool TimerRun = false;
 
-    private List<Color> correctCrossword = new List<Color>
+    private List<Color> horizontalPrompt = new List<Color>
     {
-        Color.blue, Color.red, Color.red,Color.red,
-        Color.blue, Color.blue,Color.blue,Color.blue,Color.blue,
-        Color.red, Color.red,Color.red,Color.red, Color.red
+         Color.red, Color.red,Color.red,Color.red, Color.red,
+        Color.blue, Color.blue,Color.blue,Color.blue,Color.blue
+    };
+    private List<Color> verticalPrompt = new List<Color>
+    {
+        Color.red, Color.red,Color.red, Color.blue
     };
 
 
@@ -61,8 +64,10 @@ public class ColorCube : MonoBehaviour
     {
         if (!player.moved)
         {
-            for (var i = 0; i < crossword.transform.childCount; i++)
-                crossword.transform.GetChild(i).GetComponent<Text>().color = correctCrossword[i];
+            for (var i = 0; i < crossword.transform.GetChild(0).childCount; i++)
+                crossword.transform.GetChild(0).GetChild(i).GetComponent<Text>().color = horizontalPrompt[i];
+            for (var i = 0; i < crossword.transform.GetChild(1).childCount; i++)
+                crossword.transform.GetChild(1).GetChild(i).GetComponent<Text>().color = verticalPrompt[i];
             timerCount += 10;
         }
     }
@@ -98,8 +103,13 @@ public class ColorCube : MonoBehaviour
             TouchController.SetActive(false);
         }
         if (player.moved)
-            for (var i = 0; i < crossword.transform.childCount; i++)
-                crossword.transform.GetChild(i).GetComponent<Text>().color = Color.white; 
+        {
+            for (var i = 0; i < crossword.transform.GetChild(0).childCount; i++)
+                crossword.transform.GetChild(0).GetChild(i).GetComponent<Text>().color = Color.white;
+            for (var i = 0; i < crossword.transform.GetChild(1).childCount; i++)
+                crossword.transform.GetChild(1).GetChild(i).GetComponent<Text>().color = Color.white;
+        }
+            
     }
 
     private bool CheckWin()
