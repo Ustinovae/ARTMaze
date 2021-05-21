@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public bool moved = false;
-    public float playerSpeed;
+    private float playerSpeed;
     private Vector3 dir;
     private Vector3 previosDir;
     private bool inMove;
@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     {
         inMove = false;
         color = Color.blue;
+        playerSpeed = 4f;
     }
 
     public void Move(Vector3 dir)
@@ -51,7 +52,6 @@ public class Player : MonoBehaviour
         if (collision.transform.parent.CompareTag("colorCube"))
         {
             currentCube = collision.gameObject.GetComponent<SpriteRenderer>();
-            //transform.position = collision.transform.position.;
             collision.gameObject.GetComponent<SpriteRenderer>().color = color;
         }
         if (collision.transform.parent.CompareTag("wall"))
