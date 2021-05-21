@@ -14,6 +14,5 @@ public class ColorChange : MonoBehaviour
             charcter.ChangeColor(Color.green);
         if (gameObject.name == "Blue")
             charcter.ChangeColor(Color.blue);
-
     }
 }
