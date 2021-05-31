@@ -29,6 +29,7 @@ public class Prompts : MonoBehaviour
             transform.GetChild(0).GetChild(i).GetComponent<Text>().color = horizontalPrompt[i];
         for (var i = 0; i < transform.GetChild(1).childCount; i++)
             transform.GetChild(1).GetChild(i).GetComponent<Text>().color = verticalPrompt[i];
+
     }
 
     public void ReturnToInitState()

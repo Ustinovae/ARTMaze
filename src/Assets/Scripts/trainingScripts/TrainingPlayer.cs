@@ -4,18 +4,40 @@ using UnityEngine;
 
 public class TrainingPlayer : MonoBehaviour
 {
-    public float playerSpeed;
-    public Color color;
-    public GameObject continueButton;
-    
+    private float playerSpeed;
     private Vector3 dir;
     private Vector3 previosDir;
-    private bool inMove = false;
+    private bool inMove;
+    private Color color;
     private SpriteRenderer currentCube;
+    private bool block = false;
+    private bool blockChangeColor = false;
+
+    
+
+    public TrainingPlayer()
+    {
+        inMove = false;
+        color = Color.red;
+        playerSpeed = 4f;
+    }
+
+    public void SetBlockChancgeColor(bool b)
+    {
+        blockChangeColor = b;
+    }
+
+    public void SetBlock(bool l)
+    {
+        block = l;
+    }
+
+    public Color GetCurrentColor() =>
+        color;
 
     public void Move(Vector3 dir)
     {
-        if (dir != previosDir)
+        if (dir != previosDir && !block)
         {
             inMove = true;
             this.dir = dir;
@@ -24,8 +46,12 @@ public class TrainingPlayer : MonoBehaviour
 
     public void ChangeColor(Color color)
     {
-        this.color = color;
-        currentCube.color = color;
+        if (!blockChangeColor)
+        {
+            this.color = color;
+            if (currentCube != null)
+                currentCube.color = color;
+        }
     }
 
     public bool InMove() => inMove;
@@ -37,14 +63,11 @@ public class TrainingPlayer : MonoBehaviour
 
     void Update()
     {
-        transform.position += dir * playerSpeed * Time.deltaTime;
+            transform.position += dir * playerSpeed * Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("level1.1"))
-            continueButton.SetActive(true);
-
         if (collision.transform.parent.CompareTag("colorCube"))
         {
             currentCube = collision.gameObject.GetComponent<SpriteRenderer>();

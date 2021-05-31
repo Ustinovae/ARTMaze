@@ -4,17 +4,17 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
-public class Game : MonoBehaviour
+public class TrainingGame : MonoBehaviour
 {
+    public int NumberTrainingLevel;
+
     private bool GameIsOn;
 
     public Timer Timer;
-    public ColorCube ColorCube; // переименовать, что-то типа клетки лабиритнат или т.п.
+    public TrainingColorCube ColorCube; // переименовать, что-то типа клетки лабиритнат или т.п.
     public Prompts Prompts;
-    public Player player;
-    public BuyTip BuyTip;
+    public TrainingPlayer player;
 
-    public Text MoneyText;
     public GameObject GameMap;
     public GameObject StartGame;
     public GameObject FinishGame;
@@ -32,8 +32,6 @@ public class Game : MonoBehaviour
             StartGame.SetActive(false);
         FinishGame.SetActive(true);
         ContinueButton.SetActive(false);
-        var money = PlayerPrefs.GetInt("money");
-        PlayerPrefs.SetInt("money", money + 1000);
 
     }
 
@@ -45,21 +43,16 @@ public class Game : MonoBehaviour
         ColorButtons.SetActive(true);
         GameIsOn = true;
         Prompts.Activate(true);
-        MoneyText.gameObject.SetActive(true);
-        MoneyText.text = "Money:" + PlayerPrefs.GetInt("money").ToString();
-
         Timer.Init();
         Timer.Run();
-
     }
 
     public void GetPrompt()
     {
         if (!player.InMove() && GameIsOn)
         {
-            BuyTip.gameObject.SetActive(true);
-            Timer.Stop();
-            TouchController.SetActive(false);
+            Prompts.GetPrompt();
+            Timer.IncreaseTimer(10);
         }
     }
 
@@ -70,11 +63,13 @@ public class Game : MonoBehaviour
 
     void Start()
     {
-        MoneyText.gameObject.SetActive(false);
-        ColorButtons.SetActive(false);
-        player.gameObject.SetActive(false);
-        ColorCube.PaintInCorrectColors();
-        GameIsOn = false;
+        if (NumberTrainingLevel == 1)
+            FirstTrainingLevel();
+    }
+
+    private void FirstTrainingLevel()
+    {
+
     }
 
     void Update()

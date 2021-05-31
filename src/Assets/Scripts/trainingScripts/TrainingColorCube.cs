@@ -1,65 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using System;
 
 public class TrainingColorCube : MonoBehaviour
 {
     public List<Color> correctSprite;
-    public GameObject gameMap;
-    public GameObject startGame;
-    public GameObject finishGame;
-    public GameObject continueButton;
-    public GameObject trainingTexts;
-    private int indexChild = 1;
 
-
-    public void GameWin()
-    {
-        continueButton.SetActive(false);
-        gameMap.SetActive(false);
-        if (startGame != null)
-            startGame.SetActive(false);
-        finishGame.SetActive(true);
-    }
-
-    public void ActivateContinueButton()
-    {
-        continueButton.SetActive(true);
-    }
-
-    public void ContinueHandler()
-    {
-        if (indexChild < trainingTexts.transform.childCount)
-        {
-            trainingTexts.transform.GetChild(indexChild - 1).gameObject.SetActive(false);
-            trainingTexts.transform.GetChild(indexChild).gameObject.SetActive(true);
-            indexChild += 1;
-        }
-        else if (CheckWin())
-        {
-            trainingTexts.transform.GetChild(indexChild - 1).gameObject.SetActive(false);
-            GameWin();
-        }
-    }
-
-    void Start()
-    {
-    }
-
-    void Update()
-    {
-        if (CheckWin())
-        {
-            continueButton.SetActive(true);
-        }
-    }
-
-    private bool CheckWin()
+    public void ReturnToInitState()
     {
         for (var i = 0; i < transform.childCount; i++)
         {
-            var s = transform.GetChild(i).GetComponent<SpriteRenderer>();
-            if (s.color != correctSprite[i])
+            transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(0.754717f, 0.4236383f, 0.7085454f);
+        }
+    }
+
+    public void PaintInCorrectColors()
+    {
+        for (var i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).GetComponent<SpriteRenderer>().color = correctSprite[i];
+        }
+    }
+
+    public bool CheckWin()
+    {
+        for (var i = 0; i < transform.childCount; i++)
+        {
+            var currentCell = transform.GetChild(i).GetComponent<SpriteRenderer>();
+            if (currentCell.color != correctSprite[i])
                 return false;
         }
         return true;
