@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         money = PlayerPrefs.GetInt("money");
-        Money.text = "Money:" + money.ToString();
+        Money.text = money.ToString();
         PlayerPrefs.SetInt("money", money);
     }
 

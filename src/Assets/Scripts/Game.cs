@@ -9,7 +9,7 @@ public class Game : MonoBehaviour
     private bool GameIsOn;
 
     public Timer Timer;
-    public ColorCube ColorCube; // переименовать, что-то типа клетки лабиритнат или т.п.
+    public ColorCube ColorCube; // переименовать, что-то типа клетки лабиринта или т.п.
     public Prompts Prompts;
     public Player player;
     public BuyTip BuyTip;
@@ -46,7 +46,7 @@ public class Game : MonoBehaviour
         GameIsOn = true;
         Prompts.Activate(true);
         MoneyText.gameObject.SetActive(true);
-        MoneyText.text = "Money:" + PlayerPrefs.GetInt("money").ToString();
+        MoneyText.text = PlayerPrefs.GetInt("money").ToString();
 
         Timer.Init();
         Timer.Run();

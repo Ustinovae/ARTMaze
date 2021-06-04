@@ -17,7 +17,7 @@ public class BuyTip : MonoBehaviour
     void Start()
     {
         money = PlayerPrefs.GetInt("money");
-        MoneyText.text = "Money:" + money.ToString();
+        MoneyText.text = money.ToString();
         PlayerPrefs.SetInt("money", money);
     }
 
@@ -33,12 +33,12 @@ public class BuyTip : MonoBehaviour
         {
             money -= 100;
             PlayerPrefs.SetInt("money", money);
-            MoneyText.text = "Money:" + money.ToString();
+            MoneyText.text = money.ToString();
             Prompts.GetPrompt();
             gameObject.SetActive(false);
             Timer.Run();
             TouchComtroller.gameObject.SetActive(true);
-            MainMoneyText.text = "Money:" + money.ToString();
+            MainMoneyText.text = money.ToString();
         }
     }
 

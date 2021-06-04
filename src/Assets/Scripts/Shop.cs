@@ -11,7 +11,7 @@ public class Shop : MonoBehaviour
     void Start()
     {
         money = PlayerPrefs.GetInt("money");
-        Money.text = "Money:" + money.ToString();
+        Money.text = money.ToString();
         PlayerPrefs.SetInt("money", money);
     }
 
@@ -26,7 +26,7 @@ public class Shop : MonoBehaviour
         {
             money -= 20;
             PlayerPrefs.SetInt("money", money);
-            Money.text = "Money:" + money.ToString();
+            Money.text = money.ToString();
         }
     }
 }
