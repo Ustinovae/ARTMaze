@@ -7,9 +7,10 @@ public class BuyTip : MonoBehaviour
 {
     public Text MoneyText;
     public Text MainMoneyText;
-    public SwipeController TouchComtroller;
+    public GameObject TouchController;
     public Prompts Prompts;
     public Timer Timer;
+    public int Price;
 
     private int money;
 
@@ -29,15 +30,15 @@ public class BuyTip : MonoBehaviour
 
     public void Yes()
     {
-        if (money - 100>=0)
+        if (money - Price>=0)
         {
-            money -= 100;
+            money -= Price;
             PlayerPrefs.SetInt("money", money);
             MoneyText.text = money.ToString();
             Prompts.GetPrompt();
             gameObject.SetActive(false);
             Timer.Run();
-            TouchComtroller.gameObject.SetActive(true);
+            TouchController.SetActive(true);
             MainMoneyText.text = money.ToString();
         }
     }
@@ -45,7 +46,7 @@ public class BuyTip : MonoBehaviour
     public void No()
     {
         gameObject.SetActive(false);
-        TouchComtroller.gameObject.SetActive(true);
+        TouchController.SetActive(true);
         Timer.Run();
     }
 }

@@ -21,11 +21,10 @@ public class ThirdLevel : MonoBehaviour
 
     private List<Color> correctSprite = new List<Color>
     {
-        new Color(0f, 1f, 0f, 0.5f), new Color(0f, 1f, 0f, 0.5f), new Color(0f, 1f, 0f, 0.5f), new Color(1f, 0f, 0f, 0.5f), new Color(1f, 0f, 0f, 0.5f),
-        new Color(0f, 1f, 0f, 0.5f), new Color(0f, 1f, 0f, 0.5f), new Color(0f, 1f, 0f, 0.5f), new Color(1f, 0f, 0f, 0.5f), new Color(1f, 0f, 0f, 0.5f),
-        new Color(0f, 1f, 0f, 0.5f), new Color(0f, 1f, 0f, 0.5f), new Color(0f, 1f, 0f, 0.5f), new Color(1f, 0f, 0f, 0.5f), new Color(1f, 0f, 0f, 0.5f),
-        new Color(0f, 0f, 1f, 0.5f), new Color(0f, 0f, 1f, 0.5f), new Color(0f, 0f, 1f, 0.5f), new Color(1f, 0f, 0f, 0.5f), new Color(1f, 0f, 0f, 0.5f),
-        new Color(0f, 0f, 1f, 0.5f), new Color(0f, 0f, 1f, 0.5f), new Color(0f, 0f, 1f, 0.5f), new Color(1f, 0f, 0f, 0.5f), new Color(1f, 0f, 0f, 0.5f)
+        new Color(1f, 0.03137255f, 0.03137255f, 0.5f), new Color(1f, 0.03137255f, 0.03137255f, 0.5f), new Color(0.4156863f, 1f, 1f, 0.5f), new Color(0.4156863f, 1f, 1f, 0.5f),
+        new Color(1f, 0.03137255f, 0.03137255f, 0.5f), new Color(1f, 0.03137255f, 0.03137255f, 0.5f), new Color(0.4156863f, 1f, 1f, 0.5f), new Color(0.4156863f, 1f, 1f, 0.5f), 
+        new Color(0.0627451f, 0.8862745f, 0.09411765f, 0.5f), new Color(0.0627451f, 0.8862745f, 0.09411765f, 0.5f), new Color(0.0627451f, 0.8862745f, 0.09411765f, 0.5f), new Color(0.0627451f, 0.8862745f, 0.09411765f, 0.5f),
+        new Color(0.0627451f, 0.8862745f, 0.09411765f, 0.5f), new Color(0.0627451f, 0.8862745f, 0.09411765f, 0.5f), new Color(0.0627451f, 0.8862745f, 0.09411765f, 0.5f), new Color(0.0627451f, 0.8862745f, 0.09411765f, 0.5f)
     };
 
     public void GameWin()

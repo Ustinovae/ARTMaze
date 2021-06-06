@@ -623,7 +623,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9ab1df6b7e9a1d94f946cfe5892382bd, type: 2}
+  - {fileID: 2100000, guid: 9dbae26222487c34b99de6a91fd943b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1274,7 +1274,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9ab1df6b7e9a1d94f946cfe5892382bd, type: 2}
+  - {fileID: 2100000, guid: 9dbae26222487c34b99de6a91fd943b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1464,7 +1464,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9ab1df6b7e9a1d94f946cfe5892382bd, type: 2}
+  - {fileID: 2100000, guid: 9dbae26222487c34b99de6a91fd943b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1681,7 +1681,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9ab1df6b7e9a1d94f946cfe5892382bd, type: 2}
+  - {fileID: 2100000, guid: 9dbae26222487c34b99de6a91fd943b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2736,7 +2736,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9ab1df6b7e9a1d94f946cfe5892382bd, type: 2}
+  - {fileID: 2100000, guid: 9dbae26222487c34b99de6a91fd943b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2844,7 +2844,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9ab1df6b7e9a1d94f946cfe5892382bd, type: 2}
+  - {fileID: 2100000, guid: 9dbae26222487c34b99de6a91fd943b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3821,15 +3821,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctSprite:
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 1, g: 0.03137255, b: 0.03137255, a: 1}
+  - {r: 1, g: 0.03137255, b: 0.03137255, a: 1}
+  - {r: 1, g: 0.03137255, b: 0.03137255, a: 1}
+  - {r: 1, g: 0.03137255, b: 0.03137255, a: 1}
+  - {r: 1, g: 0.03137255, b: 0.03137255, a: 1}
+  - {r: 1, g: 0.03137255, b: 0.03137255, a: 1}
+  - {r: 1, g: 0.03137255, b: 0.03137255, a: 1}
+  - {r: 1, g: 0.03137255, b: 0.03137255, a: 1}
+  - {r: 1, g: 0.03137255, b: 0.03137255, a: 1}
 --- !u!1 &2114639535
 GameObject:
   m_ObjectHideFlags: 0

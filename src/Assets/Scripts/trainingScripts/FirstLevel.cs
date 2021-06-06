@@ -49,7 +49,7 @@ public class FirstLevel : MonoBehaviour
 
     void Update()
     {
-        if (isFirstTime && ColorCube.transform.GetChild(6).GetComponent<SpriteRenderer>().color == Color.red)
+        if (isFirstTime && ColorCube.transform.GetChild(6).GetComponent<SpriteRenderer>().color == new Color(1f, 0.03137255f, 0.03137255f))
         {
             Tips.CompletTip();
             ActivateContinueButton();

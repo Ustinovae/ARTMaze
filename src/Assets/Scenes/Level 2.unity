@@ -358,7 +358,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9ab1df6b7e9a1d94f946cfe5892382bd, type: 2}
+  - {fileID: 2100000, guid: 9dbae26222487c34b99de6a91fd943b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -641,7 +641,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9ab1df6b7e9a1d94f946cfe5892382bd, type: 2}
+  - {fileID: 2100000, guid: 9dbae26222487c34b99de6a91fd943b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -908,7 +908,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9ab1df6b7e9a1d94f946cfe5892382bd, type: 2}
+  - {fileID: 2100000, guid: 9dbae26222487c34b99de6a91fd943b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1882,7 +1882,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9ab1df6b7e9a1d94f946cfe5892382bd, type: 2}
+  - {fileID: 2100000, guid: 9dbae26222487c34b99de6a91fd943b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2068,7 +2068,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9ab1df6b7e9a1d94f946cfe5892382bd, type: 2}
+  - {fileID: 2100000, guid: 9dbae26222487c34b99de6a91fd943b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2391,7 +2391,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9ab1df6b7e9a1d94f946cfe5892382bd, type: 2}
+  - {fileID: 2100000, guid: 9dbae26222487c34b99de6a91fd943b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3485,7 +3485,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trainingPlayer: {fileID: 790110870}
-  ColorCube: {fileID: 0}
 --- !u!114 &1650161251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3555,7 +3554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.07938895, g: 0.051397298, b: 0.990566, a: 1}
+  m_Color: {r: 0.41568628, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3850,7 +3849,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trainingPlayer: {fileID: 790110870}
-  ColorCube: {fileID: 0}
 --- !u!114 &1716560942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3920,7 +3918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.033018887, b: 0.033018887, a: 1}
+  m_Color: {r: 1, g: 0.03137255, b: 0.03137255, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4185,7 +4183,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trainingPlayer: {fileID: 790110870}
-  ColorCube: {fileID: 0}
 --- !u!114 &1927809433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4255,7 +4252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.06274474, g: 0.8867924, b: 0.09238434, a: 1}
+  m_Color: {r: 0.0627451, g: 0.8862745, b: 0.09411765, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4421,12 +4418,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctSprite:
-  - {r: 0, g: 0, b: 1, a: 1}
-  - {r: 0, g: 0, b: 1, a: 1}
-  - {r: 0, g: 1, b: 0, a: 1}
-  - {r: 0, g: 0, b: 1, a: 1}
-  - {r: 0, g: 0, b: 1, a: 1}
-  - {r: 0, g: 1, b: 0, a: 1}
-  - {r: 0, g: 0, b: 1, a: 1}
-  - {r: 0, g: 0, b: 1, a: 1}
-  - {r: 0, g: 1, b: 0, a: 1}
+  - {r: 0.41568628, g: 1, b: 1, a: 1}
+  - {r: 0.41568628, g: 1, b: 1, a: 1}
+  - {r: 0.0627451, g: 0.8862745, b: 0.09411765, a: 1}
+  - {r: 0.41568628, g: 1, b: 1, a: 1}
+  - {r: 0.41568628, g: 1, b: 1, a: 1}
+  - {r: 0.0627451, g: 0.8862745, b: 0.09411765, a: 1}
+  - {r: 0.41568628, g: 1, b: 1, a: 1}
+  - {r: 0.41568628, g: 1, b: 1, a: 1}
+  - {r: 0.0627451, g: 0.8862745, b: 0.09411765, a: 1}

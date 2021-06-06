@@ -20,9 +20,9 @@ public class SecondLevel : MonoBehaviour
 
     private List<Color> correctSprite = new List<Color>
     {
-        new Color(0f, 0f, 1f, 0.5f), new Color(0f, 0f, 1f, 0.5f), new Color(0f, 1f, 0f, 0.5f),
-        new Color(0f, 0f, 1f, 0.5f), new Color(0f, 0f, 1f, 0.5f), new Color(0f, 1f, 0f, 0.5f),
-        new Color(0f, 0f, 1f, 0.5f), new Color(0f, 0f, 1f, 0.5f), new Color(0f, 1f, 0f, 0.5f)
+        new Color(0.4156863f, 1, 1, 0.5f), new Color(0.4156863f, 1, 1, 0.5f), new Color(0f, 1f, 0f, 0.5f),
+        new Color(0.4156863f, 1, 1, 0.5f), new Color(0.4156863f, 1, 1, 0.5f), new Color(0f, 1f, 0f, 0.5f),
+        new Color(0.4156863f, 1, 1, 0.5f), new Color(0.4156863f, 1, 1, 0.5f), new Color(0f, 1f, 0f, 0.5f)
     };
 
     public void GameWin()
@@ -39,7 +39,7 @@ public class SecondLevel : MonoBehaviour
 
     public void ContinueButton_Click()
     {
-        if (isFirstTime && player.GetCurrentColor() == Color.blue)
+        if (isFirstTime && player.GetCurrentColor() == new Color(0.4156863f, 1, 1)) 
         {
             ChangeColorCubes();
             isFirstTime = false;
@@ -82,7 +82,7 @@ public class SecondLevel : MonoBehaviour
         else
             ContinueButton.SetActive(false);
         
-        if (isFirstTime && Tips.GetNumberTip() == 2 && player.GetCurrentColor() == Color.blue)
+        if (isFirstTime && Tips.GetNumberTip() == 2 && player.GetCurrentColor() == new Color(0.4156863f, 1, 1))
         {
             Tips.CompletTip();
             player.SetBlockChancgeColor(true);

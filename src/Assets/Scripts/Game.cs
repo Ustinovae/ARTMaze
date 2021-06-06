@@ -22,6 +22,7 @@ public class Game : MonoBehaviour
     public GameObject ColorButtons;
     public GameObject RedyButton;
     public GameObject TouchController;
+    public GameObject Prompt;
 
 
     public void GameWin()
@@ -47,6 +48,7 @@ public class Game : MonoBehaviour
         Prompts.Activate(true);
         MoneyText.gameObject.SetActive(true);
         MoneyText.text = PlayerPrefs.GetInt("money").ToString();
+        Prompt.SetActive(true); 
 
         Timer.Init();
         Timer.Run();

@@ -18,7 +18,7 @@ public class TrainingPlayer : MonoBehaviour
     public TrainingPlayer()
     {
         inMove = false;
-        color = Color.red;
+        color = new Color(1f, 0.03137255f, 0.03137255f);
         playerSpeed = 4f;
     }
 
