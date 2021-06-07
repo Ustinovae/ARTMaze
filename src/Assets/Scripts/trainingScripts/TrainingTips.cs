@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TrainingTips : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class TrainingTips : MonoBehaviour
 
     public void CompletTip()
     {
-        transform.GetChild(indexChild - 1).GetComponent<SpriteRenderer>().color = Color.green;
+        transform.GetChild(indexChild - 1).GetComponent<Image>().color = Color.green;
         currentComleted = true;
     }
 
