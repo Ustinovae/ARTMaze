@@ -30,8 +30,19 @@ public class FirstLevel : MonoBehaviour
     public void ContinueButton_Click()
     {
         Tips.ChangeTip();
-        if (Tips.GetNumberTip() == 3)
+
+        //if (Tips.GetNumberTip() == 2)
+        //{
+        //    GameMap.SetActive(false);
+        //    return;
+        //}
+        GameMap.SetActive(true);
+
+        if (Tips.GetNumberTip() == 3 && !Tips.GetCurrentStatus())
+        {
+            ContinueButton.SetActive(false);
             player.SetBlock(false);
+        }
 
         if (Tips.TipsFinished() && ColorCube.CheckWin() && !player.InMove())
         {
@@ -59,6 +70,8 @@ public class FirstLevel : MonoBehaviour
 
         if (ColorCube.CheckWin() && !player.InMove())
         {
+            if (!Tips.GetCurrentStatus())
+                ContinueButton.SetActive(true);
             TouchController.SetActive(false);
             Tips.CompletTip();
         }

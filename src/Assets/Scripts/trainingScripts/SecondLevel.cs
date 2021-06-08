@@ -81,7 +81,14 @@ public class SecondLevel : MonoBehaviour
             ContinueButton.SetActive(true);
         else
             ContinueButton.SetActive(false);
-        
+
+
+
+        //if (Tips.GetNumberTip() == 1)
+        //    GameMap.SetActive(false);
+        //else if (!win)
+        //    GameMap.SetActive(true);
+
         if (isFirstTime && Tips.GetNumberTip() == 2 && player.GetCurrentColor() == new Color(0.4156863f, 1, 1))
         {
             Tips.CompletTip();

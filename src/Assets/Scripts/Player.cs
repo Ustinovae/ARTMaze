@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public bool moved = false;
     private float playerSpeed;
     private Vector3 dir;
     private Vector3 previosDir;
@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     public Player()
     {
         inMove = false;
-        color = Color.blue;
+        color = new Color(0.4156863f, 1, 1, 1);
         playerSpeed = 4f;
     }
 
@@ -23,7 +23,6 @@ public class Player : MonoBehaviour
     {
         if (dir != previosDir)
         {
-            moved = true;
             inMove = true;
             this.dir = dir;
         }
@@ -62,7 +61,7 @@ public class Player : MonoBehaviour
             inMove = false;
             if (currentCube != null)
                 transform.position = new Vector3(currentCube.transform.position.x, currentCube.transform.position.y, transform.position.z);
-            moved = false;
         }
+        Debug.Log(playerSpeed);
     }
 }
