@@ -31,12 +31,7 @@ public class FirstLevel : MonoBehaviour
     {
         Tips.ChangeTip();
 
-        if (Tips.GetNumberTip() == 2)
-        {
-            GameMap.SetActive(false);
-            return;
-        }
-        GameMap.SetActive(true);
+        //GameMap.SetActive(true);
 
         if (Tips.GetNumberTip() == 3 && !Tips.GetCurrentStatus())
         {
