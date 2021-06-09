@@ -9,6 +9,7 @@ public class ChangeColorButton : MonoBehaviour
 
     public void ChangeColor()
     {
-        charcter.ChangeColor(gameObject.GetComponent<Image>().color);
+        if(!charcter.InMove())
+            charcter.ChangeColor(gameObject.GetComponent<Image>().color);
     }
 }

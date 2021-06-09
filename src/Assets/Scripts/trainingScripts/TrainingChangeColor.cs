@@ -9,6 +9,7 @@ public class TrainingChangeColor : MonoBehaviour
 
     public void ChangeColor()
     {
-        trainingPlayer.ChangeColor(gameObject.GetComponent<Image>().color);
+        if(!trainingPlayer.InMove())
+            trainingPlayer.ChangeColor(gameObject.GetComponent<Image>().color);
     }
 }
