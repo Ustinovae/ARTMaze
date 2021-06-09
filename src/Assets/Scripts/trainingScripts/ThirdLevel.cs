@@ -38,6 +38,15 @@ public class ThirdLevel : MonoBehaviour
 
     public void ContinueButton_Click()
     {
+        if (Tips.GetNumberTip() == 2)
+        {
+            player.SetBlock(false);
+            player.SetBlockChancgeColor(false);
+            Tips.ChangeTip();
+            ContinueButton.SetActive(false);
+            return;
+        }
+
         GameMap.SetActive(false);
         if (StartGame != null)
             StartGame.SetActive(false);
@@ -49,6 +58,9 @@ public class ThirdLevel : MonoBehaviour
 
     public void PressWhenRedy()
     {
+        player.SetBlock(true);
+        player.SetBlockChancgeColor(true);
+        ContinueButton.SetActive(true);
         player.gameObject.SetActive(true);
         RedyButton.SetActive(false);
         ColorButtons.SetActive(true);

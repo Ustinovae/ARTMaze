@@ -11,6 +11,7 @@ public class BuyTip : MonoBehaviour
     public Prompts Prompts;
     public Timer Timer;
     public int Price;
+    public bool isTraining;
 
     private int money;
 
@@ -45,6 +46,8 @@ public class BuyTip : MonoBehaviour
 
     public void No()
     {
+        if (isTraining)
+            return;
         gameObject.SetActive(false);
         TouchController.SetActive(true);
         Timer.Run();

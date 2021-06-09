@@ -51,6 +51,7 @@ public class TrainingGame : MonoBehaviour
         {
             if (Tips.TipsFinished())
             {
+                BuyTip.isTraining = false;
                 Tips.gameObject.SetActive(false);
                 ContinueButton.SetActive(false);
                 TouchController.SetActive(true);
@@ -99,7 +100,6 @@ public class TrainingGame : MonoBehaviour
         }
         if (!player.InMove() && GameIsOn)
         {
-           
             BuyTip.gameObject.SetActive(true);
             Timer.Stop();
             TouchController.SetActive(false);
