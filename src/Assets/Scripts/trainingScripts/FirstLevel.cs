@@ -31,11 +31,11 @@ public class FirstLevel : MonoBehaviour
     {
         Tips.ChangeTip();
 
-        //if (Tips.GetNumberTip() == 2)
-        //{
-        //    GameMap.SetActive(false);
-        //    return;
-        //}
+        if (Tips.GetNumberTip() == 2)
+        {
+            GameMap.SetActive(false);
+            return;
+        }
         GameMap.SetActive(true);
 
         if (Tips.GetNumberTip() == 3 && !Tips.GetCurrentStatus())
