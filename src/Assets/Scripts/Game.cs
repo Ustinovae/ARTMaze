@@ -34,8 +34,8 @@ public class Game : MonoBehaviour
         FinishGame.SetActive(true);
         ContinueButton.SetActive(false);
         var money = PlayerPrefs.GetInt("money");
-        PlayerPrefs.SetInt("money", money + 1000);
-
+        PlayerPrefs.SetInt("money", money + 500);
+        Timer.gameObject.transform.localPosition = new Vector3(0f, 10f, 0f);
     }
 
     public void PressWhenRedy()

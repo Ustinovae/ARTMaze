@@ -40,7 +40,7 @@ public class TrainingGame : MonoBehaviour
         var money = PlayerPrefs.GetInt("money");
         PlayerPrefs.SetInt("money", money + 500);
         MoneyText.text = (money + 500).ToString();
-
+        Timer.gameObject.transform.localPosition = new Vector3(0f, 10f, 0f);
     }
 
     public void ContinueButton_Click()
