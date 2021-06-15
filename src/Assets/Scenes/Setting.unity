@@ -690,8 +690,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1217460592}
-        m_TargetAssemblyTypeName: ChancgeScence, Assembly-CSharp
-        m_MethodName: NextScence
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: SwitchScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

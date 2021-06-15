@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
                 previosDir = dir;
             dir = Vector3.zero;
             inMove = false;
-            if (currentCube != null)
+            if (currentCube != null )
                 transform.position = new Vector3(currentCube.transform.position.x, currentCube.transform.position.y, transform.position.z);
             moved = false;
         }

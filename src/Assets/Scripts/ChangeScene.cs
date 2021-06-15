@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ChancgeScence : MonoBehaviour
+public class ChangeScene : MonoBehaviour
 {
-    public void NextScence(int scenceNumber)
+    public void SwitchScene(int scenceNumber)
     {
         SceneManager.LoadScene(scenceNumber);
     }

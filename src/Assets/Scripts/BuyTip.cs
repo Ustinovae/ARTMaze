@@ -15,18 +15,11 @@ public class BuyTip : MonoBehaviour
 
     private int money;
 
-    // Start is called before the first frame update
     void Start()
     {
         money = PlayerPrefs.GetInt("money");
         MoneyText.text = money.ToString();
         PlayerPrefs.SetInt("money", money);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void Yes()

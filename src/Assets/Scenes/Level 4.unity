@@ -548,7 +548,7 @@ GameObject:
   - component: {fileID: 182097000}
   - component: {fileID: 182096999}
   m_Layer: 0
-  m_Name: Scence Manager
+  m_Name: Scene Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -711,7 +711,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
 --- !u!212 &188784140
 SpriteRenderer:
@@ -820,7 +820,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
 --- !u!212 &198040304
 SpriteRenderer:
@@ -1036,8 +1036,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 182096999}
-        m_TargetAssemblyTypeName: ChancgeScence, Assembly-CSharp
-        m_MethodName: NextScence
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: SwitchScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2470,7 +2470,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
 --- !u!212 &424053514
 SpriteRenderer:
@@ -2579,7 +2579,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
 --- !u!212 &451023017
 SpriteRenderer:
@@ -2911,8 +2911,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533720778}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.3245, y: -1.466, z: 0}
-  m_LocalScale: {x: 0.6930328, y: 0.06, z: 1}
+  m_LocalPosition: {x: -8.3264, y: -1.467, z: 0}
+  m_LocalScale: {x: 0.6892904, y: 0.06, z: 1}
   m_Children: []
   m_Father: {fileID: 1379028407}
   m_RootOrder: 5
@@ -3394,8 +3394,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 182096999}
-        m_TargetAssemblyTypeName: ChancgeScence, Assembly-CSharp
-        m_MethodName: NextScence
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: SwitchScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4708,8 +4708,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1059649899}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.159, y: 0.4554, z: 0}
-  m_LocalScale: {x: 0.06, y: 0.69441587, z: 1}
+  m_LocalPosition: {x: -7.161, y: 0.4587, z: 0}
+  m_LocalScale: {x: 0.06, y: 0.6878883, z: 1}
   m_Children: []
   m_Father: {fileID: 1379028407}
   m_RootOrder: 7
@@ -4925,7 +4925,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
 --- !u!212 &1098846142
 SpriteRenderer:
@@ -5323,8 +5323,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 182096999}
-        m_TargetAssemblyTypeName: ChancgeScence, Assembly-CSharp
-        m_MethodName: NextScence
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: SwitchScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5676,8 +5676,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 182096999}
-        m_TargetAssemblyTypeName: ChancgeScence, Assembly-CSharp
-        m_MethodName: NextScence
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: SwitchScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6576,7 +6576,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
 --- !u!212 &1390911061
 SpriteRenderer:
@@ -6685,7 +6685,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
 --- !u!212 &1415530980
 SpriteRenderer:
@@ -7316,8 +7316,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535448538}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.495, y: -0.713, z: 0}
-  m_LocalScale: {x: 0.7206791, y: 0.06, z: 1}
+  m_LocalPosition: {x: -7.49232, y: -0.713, z: 0}
+  m_LocalScale: {x: 0.7133013, y: 0.06, z: 1}
   m_Children: []
   m_Father: {fileID: 1379028407}
   m_RootOrder: 6
@@ -7424,8 +7424,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1552393072}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -5.984, y: -0.709, z: 0}
-  m_LocalScale: {x: 0.06, y: 0.7362109, z: 1}
+  m_LocalPosition: {x: -5.9807, y: -0.714, z: 0}
+  m_LocalScale: {x: 0.06, y: 0.7296586, z: 1}
   m_Children: []
   m_Father: {fileID: 1379028407}
   m_RootOrder: 4
@@ -7639,7 +7639,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
 --- !u!212 &1569346800
 SpriteRenderer:
@@ -8883,7 +8883,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
 --- !u!212 &1684963640
 SpriteRenderer:
@@ -8992,7 +8992,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
 --- !u!212 &1685228379
 SpriteRenderer:
@@ -9482,7 +9482,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1774832733}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.165, y: -1.041, z: 0}
+  m_LocalPosition: {x: -7.163, y: -1.041, z: 0}
   m_LocalScale: {x: 0.06, y: 0.7106728, z: 1}
   m_Children: []
   m_Father: {fileID: 1379028407}
@@ -9914,7 +9914,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
 --- !u!212 &1818928967
 SpriteRenderer:
@@ -10204,7 +10204,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
 --- !u!212 &1843026064
 SpriteRenderer:
@@ -10421,7 +10421,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
 --- !u!212 &1854018794
 SpriteRenderer:
@@ -10607,7 +10607,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
 --- !u!212 &1920933820
 SpriteRenderer:
@@ -11466,7 +11466,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
 --- !u!212 &2080497041
 SpriteRenderer:
@@ -11821,7 +11821,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
 --- !u!212 &2087928423
 SpriteRenderer:
