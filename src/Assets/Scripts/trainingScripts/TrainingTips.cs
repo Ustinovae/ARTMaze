@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TrainingTips : MonoBehaviour
 {
-    private int indexChild =1;
+    private int indexChild = 1;
     private bool currentComleted = false;
 
     public void CompletTip()
@@ -28,13 +28,9 @@ public class TrainingTips : MonoBehaviour
     public bool GetCurrentStatus() =>
         currentComleted;
 
-    public bool TipsFinished()
-    {
-        return indexChild == transform.childCount;
-    }
+    public bool TipsFinished() =>
+        indexChild == transform.childCount;
 
-    public int GetNumberTip()
-    {
-        return indexChild;
-    }
+    public int GetNumberTip() =>
+        indexChild;
 }

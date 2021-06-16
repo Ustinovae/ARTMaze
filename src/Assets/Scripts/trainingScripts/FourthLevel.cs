@@ -1,17 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
 
-public class TrainingGame : MonoBehaviour
+public class FourthLevel : MonoBehaviour
 {
-    private bool GameIsOn;
-
     public Timer Timer;
-    public ColorCube ColorCube; // переименовать, что-то типа клетки лабиринта или т.п.
+    public ColorCube ColorCube;
     public Prompts Prompts;
-    public TrainingPlayer player;
+    public Player Player;
     public BuyTip BuyTip;
     public TrainingTips Tips;
 
@@ -22,16 +17,16 @@ public class TrainingGame : MonoBehaviour
     public GameObject ContinueButton;
     public GameObject ColorButtons;
     public GameObject RedyButton;
-    public GameObject TouchController;
+    public GameObject SwipeController;
     public GameObject Prompt;
 
     private bool win = false;
     private bool isTrainig = true;
-
+    private bool GameIsOn;
 
     public void GameWin()
     {
-        Prompts.Activate(false);
+        Prompts.SetActive(false);
         GameMap.SetActive(false);
         if (StartGame != null)
             StartGame.SetActive(false);
@@ -54,9 +49,9 @@ public class TrainingGame : MonoBehaviour
                 BuyTip.isTraining = false;
                 Tips.gameObject.SetActive(false);
                 ContinueButton.SetActive(false);
-                TouchController.SetActive(true);
+                SwipeController.SetActive(true);
                 Timer.Run();
-                player.SetBlockChancgeColor(false);
+                Player.SetBlockChancgeColor(false);
                 GameIsOn = true;
             }
 
@@ -76,14 +71,14 @@ public class TrainingGame : MonoBehaviour
     {
         RedyButton.SetActive(false);
         ColorCube.ReturnToInitState();
-        player.gameObject.SetActive(true);
+        Player.gameObject.SetActive(true);
         ColorButtons.SetActive(true);
         GameIsOn = false;
-        Prompts.Activate(true);
-        
-        TouchController.SetActive(false);
+        Prompts.SetActive(true);
+
+        SwipeController.SetActive(false);
         Tips.ChangeTip();
-        ActivateContinueButton();
+        ContinueButton.SetActive(true);
 
         Timer.Init();
     }
@@ -96,57 +91,49 @@ public class TrainingGame : MonoBehaviour
             Tips.ChangeTip();
             BuyTip.gameObject.SetActive(true);
             Timer.Stop();
-            TouchController.SetActive(false);
+            SwipeController.SetActive(false);
         }
-        if (!player.InMove() && GameIsOn)
+        if (!Player.InMove() && GameIsOn)
         {
             BuyTip.gameObject.SetActive(true);
             Timer.Stop();
-            TouchController.SetActive(false);
+            SwipeController.SetActive(false);
         }
-    }
-
-    public void ActivateContinueButton()
-    {
-        ContinueButton.SetActive(true);
     }
 
     void Start()
     {
+        Player.ChangeColor(ColorCube.CorrectSprite[0]);
         MoneyText.gameObject.SetActive(false);
         ColorButtons.SetActive(false);
-        player.gameObject.SetActive(false);
+        Player.gameObject.SetActive(false);
         ColorCube.PaintInCorrectColors();
         GameIsOn = false;
-        player.SetBlockChancgeColor(true);
+        Player.SetBlockChancgeColor(true);
     }
 
     void Update()
     {
-        if(Tips.GetNumberTip() == 5 && TouchController.activeSelf)
+        if (Tips.GetNumberTip() == 5 && SwipeController.activeSelf)
         {
             Timer.Stop();
-            TouchController.SetActive(false);
+            SwipeController.SetActive(false);
             ContinueButton.SetActive(true);
             Tips.ChangeTip();
-            
+
         }
 
-        if (ColorCube.CheckWin() && GameIsOn && !player.InMove())
+        if (ColorCube.CheckWin() && GameIsOn && !Player.InMove())
         {
             win = true;
             ContinueButton.SetActive(true);
             Timer.Stop();
-            TouchController.SetActive(false);
+            SwipeController.SetActive(false);
+            Player.SetBlockChancgeColor(true);
             GameIsOn = false;
         }
 
-        //if (!GameIsOn)
-        //    Timer.Stop();
-
-        if (player.InMove())
-        {
+        if (Player.InMove())
             Prompts.ReturnToInitState();
-        }
     }
 }

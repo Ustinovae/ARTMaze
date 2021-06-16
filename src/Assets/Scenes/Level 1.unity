@@ -1034,12 +1034,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ColorCube: {fileID: 1988553887}
-  player: {fileID: 1674317051}
+  Player: {fileID: 1674317051}
   Tips: {fileID: 407349230}
   GameMap: {fileID: 679201783}
   FinishGame: {fileID: 1458109865}
   ContinueButton: {fileID: 1718208402}
-  TouchController: {fileID: 777562265}
+  SwipeController: {fileID: 777562265}
 --- !u!114 &594543858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1300,10 +1300,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 777562265}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7c11d4866e29094ea5f96424e13611b, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d1b5b63a65e66840afad70b3061f3b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trainingPlayer: {fileID: 1674317051}
+  Player: {fileID: 1674317051}
 --- !u!114 &777562267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3422,7 +3422,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1674317048}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cf00569b7d999f4fab9a81aafc5c16b, type: 3}
+  m_Script: {fileID: 11500000, guid: 873b07c1a94c90e4699d80700211d49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!50 &1674317052
@@ -4217,10 +4217,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1988553885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cb32fcfad9bc654f945e7c476472311, type: 3}
+  m_Script: {fileID: 11500000, guid: c79e755165c8d0743b51dfb5c904bb23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctSprite:
+  CorrectSprite:
   - {r: 1, g: 0.03137255, b: 0.03137255, a: 1}
   - {r: 1, g: 0.03137255, b: 0.03137255, a: 1}
   - {r: 1, g: 0.03137255, b: 0.03137255, a: 1}

@@ -1,17 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
 
 public class Game : MonoBehaviour
 {
-    private bool GameIsOn;
-
     public Timer Timer;
-    public ColorCube ColorCube; // переименовать, что-то типа клетки лабиринта или т.п.
+    public ColorCube ColorCube;
     public Prompts Prompts;
-    public Player player;
+    public Player Player;
     public BuyTip BuyTip;
 
     public Text MoneyText;
@@ -24,15 +19,17 @@ public class Game : MonoBehaviour
     public GameObject TouchController;
     public GameObject Prompt;
 
+    private bool gameIsOn;
 
     public void GameWin()
     {
-        Prompts.Activate(false);
+        Prompts.SetActive(false);
         GameMap.SetActive(false);
         if (StartGame != null)
             StartGame.SetActive(false);
         FinishGame.SetActive(true);
         ContinueButton.SetActive(false);
+
         var money = PlayerPrefs.GetInt("money");
         PlayerPrefs.SetInt("money", money + 500);
         Timer.gameObject.transform.localPosition = new Vector3(0f, 10f, 0f);
@@ -42,22 +39,21 @@ public class Game : MonoBehaviour
     {
         RedyButton.SetActive(false);
         ColorCube.ReturnToInitState();
-        player.gameObject.SetActive(true);
+        Player.gameObject.SetActive(true);
         ColorButtons.SetActive(true);
-        GameIsOn = true;
-        Prompts.Activate(true);
+        gameIsOn = true;
+        Prompts.SetActive(true);
         MoneyText.gameObject.SetActive(true);
         MoneyText.text = PlayerPrefs.GetInt("money").ToString();
-        Prompt.SetActive(true); 
+        Prompt.SetActive(true);
 
         Timer.Init();
         Timer.Run();
-
     }
 
     public void GetPrompt()
     {
-        if (!player.InMove() && GameIsOn)
+        if (!Player.InMove() && gameIsOn)
         {
             BuyTip.gameObject.SetActive(true);
             Timer.Stop();
@@ -65,32 +61,27 @@ public class Game : MonoBehaviour
         }
     }
 
-    public void ActivateContinueButton()
-    {
-        ContinueButton.SetActive(true);
-    }
-
     void Start()
     {
+        Player.ChangeColor(ColorCube.CorrectSprite[0]);
         MoneyText.gameObject.SetActive(false);
         ColorButtons.SetActive(false);
-        player.gameObject.SetActive(false);
+        Player.gameObject.SetActive(false);
         ColorCube.PaintInCorrectColors();
-        GameIsOn = false;
+        gameIsOn = false;
     }
 
     void Update()
     {
-        if (ColorCube.CheckWin() && GameIsOn && !player.InMove())
+        if (ColorCube.CheckWin() && gameIsOn && !Player.InMove())
         {
+            Player.SetBlockChancgeColor(true);
             ContinueButton.SetActive(true);
             Timer.Stop();
             TouchController.SetActive(false);
-            GameIsOn = false;
+            gameIsOn = false;
         }
-        if (player.InMove())
-        {
+        if (Player.InMove())
             Prompts.ReturnToInitState();
-        }
     }
 }

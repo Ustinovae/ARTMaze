@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
     public Text Money;
+
     private int money;
 
     void Start()
@@ -13,11 +12,6 @@ public class Shop : MonoBehaviour
         money = PlayerPrefs.GetInt("money");
         Money.text = money.ToString();
         PlayerPrefs.SetInt("money", money);
-    }
-
-    void Update()
-    {
-
     }
 
     public void Buy()

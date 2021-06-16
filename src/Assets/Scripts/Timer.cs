@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,18 +29,14 @@ public class Timer : MonoBehaviour
         gameObject.SetActive(true);
     }
 
-    public void Stop()
-    {
+    public void Stop() =>
         timerRun = false;
-    }
 
-    public void Run()
-    {
+
+    public void Run() =>
         timerRun = true;
-    }
 
-    public void IncreaseTimer(float deltaTime)
-    {
+
+    public void IncreaseTimer(float deltaTime) =>
         timer += deltaTime;
-    }
 }

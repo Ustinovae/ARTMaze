@@ -1,17 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FirstLevel : MonoBehaviour
 {
-    public TrainingColorCube ColorCube; // переименовать, что-то типа клетки лабиритнат или т.п.
-    public TrainingPlayer player;
+    public ColorCube ColorCube;
+    public Player Player;
     public TrainingTips Tips;
 
     public GameObject GameMap;
     public GameObject FinishGame;
     public GameObject ContinueButton;
-    public GameObject TouchController;
+    public GameObject SwipeController;
 
     private bool isFirstTime = true;
 
@@ -22,24 +20,17 @@ public class FirstLevel : MonoBehaviour
         ContinueButton.SetActive(false);
     }
 
-    public void ActivateContinueButton()
-    {
-        ContinueButton.SetActive(true);
-    }
-
     public void ContinueButton_Click()
     {
         Tips.ChangeTip();
 
-        //GameMap.SetActive(true);
-
         if (Tips.GetNumberTip() == 3 && !Tips.GetCurrentStatus())
         {
             ContinueButton.SetActive(false);
-            player.SetBlock(false);
+            SwipeController.SetActive(true); ;
         }
 
-        if (Tips.TipsFinished() && ColorCube.CheckWin() && !player.InMove())
+        if (Tips.TipsFinished() && ColorCube.CheckWin() && !Player.InMove())
         {
             GameMap.SetActive(false);
             ContinueButton.SetActive(false);
@@ -48,9 +39,9 @@ public class FirstLevel : MonoBehaviour
         }
     }
 
-    void Start()
+    private void Start()
     {
-        
+        Player.ChangeColor(ColorCube.CorrectSprite[0]);
     }
 
     void Update()
@@ -58,16 +49,16 @@ public class FirstLevel : MonoBehaviour
         if (isFirstTime && ColorCube.transform.GetChild(6).GetComponent<SpriteRenderer>().color == new Color(1f, 0.03137255f, 0.03137255f))
         {
             Tips.CompletTip();
-            ActivateContinueButton();
+            ContinueButton.SetActive(true);
             isFirstTime = false;
-            player.SetBlock(true);
+            SwipeController.SetActive(false);
         }
 
-        if (ColorCube.CheckWin() && !player.InMove())
+        if (ColorCube.CheckWin() && !Player.InMove())
         {
             if (!Tips.GetCurrentStatus())
                 ContinueButton.SetActive(true);
-            TouchController.SetActive(false);
+            SwipeController.SetActive(false);
             Tips.CompletTip();
         }
     }

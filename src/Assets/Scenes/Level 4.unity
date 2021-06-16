@@ -476,10 +476,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 160887881}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7c11d4866e29094ea5f96424e13611b, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d1b5b63a65e66840afad70b3061f3b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trainingPlayer: {fileID: 1817602496}
+  Player: {fileID: 1817602496}
 --- !u!114 &160887883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1912,10 +1912,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 381489625}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aac8b8453e643114b8327fd66f3b9b8f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b016d5c127193f4695d567657fce516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trainingPlayer: {fileID: 1817602496}
+  Player: {fileID: 1817602496}
 --- !u!114 &381489628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1961,7 +1961,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 381489627}
-        m_TargetAssemblyTypeName: TrainingChangeColor, Assembly-CSharp
+        m_TargetAssemblyTypeName: ChangeColorButton, Assembly-CSharp
         m_MethodName: ChangeColor
         m_Mode: 1
         m_Arguments:
@@ -3294,16 +3294,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed1d1369912d8634c84d253e0271980c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalPrompt:
+  HorizontalPrompt:
   - {r: 1, g: 0.03137255, b: 0.03137255, a: 1}
   - {r: 1, g: 0.03137255, b: 0.03137255, a: 1}
   - {r: 0.41568628, g: 1, b: 1, a: 1}
-  - {r: 0.41568628, g: 1, b: 1, a: 1}
+  - {r: 0.4156863, g: 1, b: 1, a: 1}
   - {r: 0.0627451, g: 0.8862745, b: 0.09411765, a: 1}
+  - {r: 0.0627451, g: 0.8862746, b: 0.09411766, a: 1}
+  VerticalPrompt:
   - {r: 0.0627451, g: 0.8862745, b: 0.09411765, a: 1}
-  verticalPrompt:
-  - {r: 0.0627451, g: 0.8862745, b: 0.09411765, a: 1}
-  - {r: 0.0627451, g: 0.8862745, b: 0.09411765, a: 1}
+  - {r: 0.0627451, g: 0.8862746, b: 0.09411766, a: 1}
   - {r: 1, g: 0.03137255, b: 0.03137255, a: 1}
   - {r: 1, g: 0.03137255, b: 0.03137255, a: 1}
   - {r: 0.41568628, g: 1, b: 1, a: 1}
@@ -4824,7 +4824,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -16.63, y: -40.50009}
+  m_AnchoredPosition: {x: -16.63, y: -40.500122}
   m_SizeDelta: {x: 100, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1080961933
@@ -5450,7 +5450,7 @@ MonoBehaviour:
   Timer: {fileID: 1136519416}
   ColorCube: {fileID: 1181863752}
   Prompts: {fileID: 573694016}
-  player: {fileID: 1817602496}
+  Player: {fileID: 1817602496}
   BuyTip: {fileID: 1569450257}
   Tips: {fileID: 752253028}
   MoneyText: {fileID: 1080961933}
@@ -5460,7 +5460,7 @@ MonoBehaviour:
   ContinueButton: {fileID: 789411814}
   ColorButtons: {fileID: 307664291}
   RedyButton: {fileID: 2080557929}
-  TouchController: {fileID: 160887881}
+  SwipeController: {fileID: 160887881}
   Prompt: {fileID: 38560810}
 --- !u!114 &1134178779
 MonoBehaviour:
@@ -5859,21 +5859,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c79e755165c8d0743b51dfb5c904bb23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctSprite:
+  CorrectSprite:
   - {r: 0.41568628, g: 1, b: 1, a: 1}
   - {r: 0.41568628, g: 1, b: 1, a: 1}
   - {r: 0.0627451, g: 0.8862745, b: 0.09411765, a: 1}
-  - {r: 0.0627451, g: 0.8862745, b: 0.09411765, a: 1}
+  - {r: 0.0627451, g: 0.8862746, b: 0.09411766, a: 1}
   - {r: 0.41568628, g: 1, b: 1, a: 1}
   - {r: 0.41568628, g: 1, b: 1, a: 1}
-  - {r: 0.0627451, g: 0.8862745, b: 0.09411765, a: 1}
-  - {r: 0.0627451, g: 0.8862745, b: 0.09411765, a: 1}
+  - {r: 0.0627451, g: 0.8862746, b: 0.09411766, a: 1}
+  - {r: 0.0627451, g: 0.8862746, b: 0.09411766, a: 1}
   - {r: 0.41568628, g: 1, b: 1, a: 1}
   - {r: 0.41568628, g: 1, b: 1, a: 1}
   - {r: 1, g: 0.03137255, b: 0.03137255, a: 1}
   - {r: 1, g: 0.03137255, b: 0.03137255, a: 1}
-  - {r: 0.41568628, g: 1, b: 1, a: 1}
-  - {r: 0.41568628, g: 1, b: 1, a: 1}
+  - {r: 0.4156863, g: 1, b: 1, a: 1}
+  - {r: 0.4156863, g: 1, b: 1, a: 1}
   - {r: 1, g: 0.03137255, b: 0.03137255, a: 1}
   - {r: 1, g: 0.03137255, b: 0.03137255, a: 1}
 --- !u!1 &1191296278
@@ -7152,10 +7152,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1529915762}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aac8b8453e643114b8327fd66f3b9b8f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b016d5c127193f4695d567657fce516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trainingPlayer: {fileID: 1817602496}
+  Player: {fileID: 1817602496}
 --- !u!114 &1529915765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7201,7 +7201,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1529915764}
-        m_TargetAssemblyTypeName: TrainingChangeColor, Assembly-CSharp
+        m_TargetAssemblyTypeName: ChangeColorButton, Assembly-CSharp
         m_MethodName: ChangeColor
         m_Mode: 1
         m_Arguments:
@@ -7750,7 +7750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoneyText: {fileID: 282566369}
   MainMoneyText: {fileID: 1080961933}
-  TouchController: {fileID: 160887881}
+  SwipeController: {fileID: 160887881}
   Prompts: {fileID: 573694016}
   Timer: {fileID: 1136519416}
   Price: 0
@@ -8200,10 +8200,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1646054879}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aac8b8453e643114b8327fd66f3b9b8f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b016d5c127193f4695d567657fce516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trainingPlayer: {fileID: 1817602496}
+  Player: {fileID: 1817602496}
 --- !u!114 &1646054882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8249,7 +8249,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1646054881}
-        m_TargetAssemblyTypeName: TrainingChangeColor, Assembly-CSharp
+        m_TargetAssemblyTypeName: ChangeColorButton, Assembly-CSharp
         m_MethodName: ChangeColor
         m_Mode: 1
         m_Arguments:
@@ -9757,7 +9757,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1817602494}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cf00569b7d999f4fab9a81aafc5c16b, type: 3}
+  m_Script: {fileID: 11500000, guid: 873b07c1a94c90e4699d80700211d49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &1817602497
@@ -11027,7 +11027,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -154.49997}
+  m_AnchoredPosition: {x: 0, y: -154.5}
   m_SizeDelta: {x: 373, y: 187}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2051287404

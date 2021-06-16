@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,7 +5,7 @@ public class BuyTip : MonoBehaviour
 {
     public Text MoneyText;
     public Text MainMoneyText;
-    public GameObject TouchController;
+    public GameObject SwipeController;
     public Prompts Prompts;
     public Timer Timer;
     public int Price;
@@ -24,7 +22,7 @@ public class BuyTip : MonoBehaviour
 
     public void Yes()
     {
-        if (money - Price>=0)
+        if (money - Price >= 0)
         {
             money -= Price;
             PlayerPrefs.SetInt("money", money);
@@ -32,7 +30,7 @@ public class BuyTip : MonoBehaviour
             Prompts.GetPrompt();
             gameObject.SetActive(false);
             Timer.Run();
-            TouchController.SetActive(true);
+            SwipeController.SetActive(true);
             MainMoneyText.text = money.ToString();
         }
     }
@@ -42,7 +40,7 @@ public class BuyTip : MonoBehaviour
         if (isTraining)
             return;
         gameObject.SetActive(false);
-        TouchController.SetActive(true);
+        SwipeController.SetActive(true);
         Timer.Run();
     }
 }

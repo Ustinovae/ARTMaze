@@ -1,24 +1,23 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SecondLevel : MonoBehaviour
 {
-    public TrainingColorCube ColorCube; // переименовать, что-то типа клетки лабиритнат или т.п.
-    public TrainingPlayer player;
+    public ColorCube ColorCube;
+    public Player Player;
     public TrainingTips Tips;
 
     public GameObject colorButtons;
     public GameObject GameMap;
     public GameObject FinishGame;
     public GameObject ContinueButton;
-    public GameObject TouchController;
+    public GameObject SwipeController;
 
     private bool isFirstTime = true;
     private bool win = false;
     private bool finish = false;
 
-    private List<Color> correctSprite = new List<Color>
+    private readonly List<Color> spriteForHighlight = new List<Color>
     {
         new Color(0.4156863f, 1, 1, 0.5f), new Color(0.4156863f, 1, 1, 0.5f), new Color(0f, 1f, 0f, 0.5f),
         new Color(0.4156863f, 1, 1, 0.5f), new Color(0.4156863f, 1, 1, 0.5f), new Color(0f, 1f, 0f, 0.5f),
@@ -32,20 +31,15 @@ public class SecondLevel : MonoBehaviour
         ContinueButton.SetActive(false);
     }
 
-    public void ActivateContinueButton()
-    {
-        ContinueButton.SetActive(true);
-    }
-
     public void ContinueButton_Click()
     {
-        if (isFirstTime && player.GetCurrentColor() == new Color(0.4156863f, 1, 1)) 
+        if (isFirstTime && Player.GetCurrentColor() == new Color(0.4156863f, 1, 1))
         {
             ChangeColorCubes();
             isFirstTime = false;
         }
         Tips.ChangeTip();
-        
+
         if (win)
         {
             GameMap.SetActive(false);
@@ -58,19 +52,19 @@ public class SecondLevel : MonoBehaviour
         }
         if (Tips.GetNumberTip() == 3)
         {
-            player.SetBlockChancgeColor(false);
-            player.SetBlock(false);
+            Player.SetBlockChancgeColor(false);
+            SwipeController.SetActive(true);
         }
         if (Tips.GetNumberTip() == 2)
-            player.SetBlockChancgeColor(false);
-
+            Player.SetBlockChancgeColor(false);
     }
 
     void Start()
     {
-        player.SetBlock(true);
-        ActivateContinueButton();
-        player.SetBlockChancgeColor(true);
+        Player.ChangeColor(Color.red);
+        SwipeController.SetActive(false);
+        ContinueButton.SetActive(true);
+        Player.SetBlockChancgeColor(true);
     }
 
     void Update()
@@ -82,27 +76,24 @@ public class SecondLevel : MonoBehaviour
         else
             ContinueButton.SetActive(false);
 
-        if (isFirstTime && Tips.GetNumberTip() == 2 && player.GetCurrentColor() == new Color(0.4156863f, 1, 1))
+        if (isFirstTime && Tips.GetNumberTip() == 2 && Player.GetCurrentColor() == new Color(0.4156863f, 1, 1))
         {
             Tips.CompletTip();
-            player.SetBlockChancgeColor(true);
-            //player.SetBlock(true);
+            Player.SetBlockChancgeColor(true);
         }
 
-        if (ColorCube.CheckWin() && !player.InMove())
+        if (ColorCube.CheckWin() && !Player.InMove())
         {
-            TouchController.SetActive(false);
+            SwipeController.SetActive(false);
             Tips.CompletTip();
             win = true;
+            Player.SetBlockChancgeColor(true);
         }
     }
 
     private void ChangeColorCubes()
     {
         for (var i = 1; i < ColorCube.transform.childCount; i++)
-        {
-            ColorCube.transform.GetChild(i).GetComponent<SpriteRenderer>().color = correctSprite[i];
-        }
-
+            ColorCube.transform.GetChild(i).GetComponent<SpriteRenderer>().color = spriteForHighlight[i];
     }
 }
